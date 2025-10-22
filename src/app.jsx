@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/adminDashboard";
-import Login from "./pages/Login";
+import Login from "./pages/login";
 import Profile from "./pages/profile"; // ✅ added
 
 export default function App() {
