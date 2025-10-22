@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-const API = process.env.REACT_APP_API_URL;
-; 
+const API = "https://backend-pc-deuu.onrender.com";
 
 export default function AdminDashboard() {
   // -----------------------------
