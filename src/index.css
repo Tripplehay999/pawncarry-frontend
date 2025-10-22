@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Root colors & base ---------- */
+:root {
+  --bg: #0b0f14;
+  --surface: #0f1720;
+  --panel: #0b1220;
+  --accent: #3b82f6;
+  --accent2: #06b6d4;
+  --muted: #94a3b8;
+  --glass: rgba(255,255,255,0.04);
+}
+
+/* Page background */
+body {
+  background: linear-gradient(180deg, #071018 0%, #08111a 40%, #0b0f14 100%);
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism card */
+.card-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+/* subtle divider */
+.row-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+}
+
+/* badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* buttons */
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: white;
+  padding: 0.625rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 6px 18px rgba(59,130,246,0.12);
+}
+.btn-primary:hover { transform: translateY(-2px); transition: all .15s ease; }
+
+/* inputs */
+.input-flat {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: white;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.6rem;
+}
+
+/* transactions table */
+.table-header {
+  color: #cbd5e1; /* muted white */
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.table-row {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.table-row:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+/* balance counter */
+.balance-number {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* responsive horizontal cards scroll */
+.horizontal-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* subtle animation shimmer (for loading states if needed) */
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+@keyframes shimmer { 100% { background-position: -200% 0; } }
+
+/* small helpers */
+.text-muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+
+/* StatCard floating effect (enhancement) */
+.stat-card {
+  position: relative;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.2),
+    0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.3),
+    0 0 3px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.06);
+}
