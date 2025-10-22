@@ -2,7 +2,11 @@
   "name": "payment-dashboard-frontend",
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
+    "prebuild": "chmod +x ./node_modules/.bin/vite || true",
     "dev": "vite",
     "build": "npx vite build",
     "preview": "npx vite preview"
